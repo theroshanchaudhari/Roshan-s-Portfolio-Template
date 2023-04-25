@@ -609,6 +609,9 @@ body {
 .side-nav li:nth-child(5)::before {
   content: "05";
 }
+.side-nav li:nth-child(6)::before {
+  content: "06";
+}
 .side-nav li.is-active {
   color: #0f33ff;
   -webkit-transition: color 0.4s ease-in-out;
@@ -874,11 +877,11 @@ body {
 
 .carousel-item {
   --items: 10;
-  --width: clamp(400px, 40vw,  400px);
-  --height: clamp(797px, 40vw,  797px);
+  --width: clamp(150px, 40vw,  150px);
+  --height: clamp(299px, 40vw,  299px);
   --x: calc(var(--active) * 800%);
-  --y: calc(var(--active) * 200%);
-  --rot: calc(var(--active) * 120deg);
+  --y: calc(var(--active) * 00%);
+  --rot: calc(var(--active) * 0deg);
   --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
   overflow: hidden;
   position: absolute;
@@ -886,8 +889,8 @@ body {
   width: var(--width);
   height: var(--height);
   margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
-  border-radius: 65px;
-  top: 50%;
+  border-radius: 5px;
+  top: 33%;
   left: 50%;
   user-select: none;
   transform-origin: 0% 100%;
@@ -899,11 +902,11 @@ body {
   }
   /* .carousel-item2 {
     --items: 10;
-    --width: clamp(400px, 40vw,  400px);
-    --height: clamp(797px, 40vw,  797px);
+    --width: clamp(150px, 40vw,  150px);
+    --height: clamp(299px, 40vw,  299px);
     --x: calc(var(--active) * 800%);
-    --y: calc(var(--active) * 200%);
-    --rot: calc(var(--active) * 120deg);
+    --y: calc(var(--active) * 00%);
+    --rot: calc(var(--active) * 0deg);
     --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
     overflow: hidden;
     position: absolute;
@@ -911,8 +914,8 @@ body {
     width: var(--width);
     height: var(--height);
     margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
-    border-radius: 65px;
-    top: 50%;
+    border-radius: 5px;
+    top: 75%;
     left: 50%;
     user-select: none;
     transform-origin: 0% 100%;
@@ -948,8 +951,8 @@ body {
     opacity: var(--opacity);
     
   }
-/* 
-  .carousel-box2{
+
+  /* .carousel-box2{
     position: absolute;
     z-index: 1;
     top: 0;

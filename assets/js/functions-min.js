@@ -1258,129 +1258,129 @@
             );
         });
     }
-    function s() {
-      $(".slider--prev, .slider--next").click(function () {
-        var t = $(this),
-          e = $(".slider").find(".slider--item-left"),
-          i = $(".slider").children().index(e),
-          n = $(".slider").find(".slider--item-center"),
-          s = $(".slider").children().index(n),
-          r = $(".slider").find(".slider--item-right"),
-          o = $(".slider").children().index(r),
-          a = $(".slider").children().length,
-          l = $(".slider--item-left"),
-          c = $(".slider--item-center"),
-          h = $(".slider--item-right"),
-          u = $(".slider--item");
-        $(".slider").animate({ opacity: 0 }, 400),
-          setTimeout(function () {
-            t.hasClass("slider--next")
-              ? a - 1 > i && a - 1 > s && a - 1 > o
-                ? (l
-                    .removeClass("slider--item-left")
-                    .next()
-                    .addClass("slider--item-left"),
-                  c
-                    .removeClass("slider--item-center")
-                    .next()
-                    .addClass("slider--item-center"),
-                  h
-                    .removeClass("slider--item-right")
-                    .next()
-                    .addClass("slider--item-right"))
-                : i === a - 1
-                ? (u
-                    .removeClass("slider--item-left")
-                    .first()
-                    .addClass("slider--item-left"),
-                  c
-                    .removeClass("slider--item-center")
-                    .next()
-                    .addClass("slider--item-center"),
-                  h
-                    .removeClass("slider--item-right")
-                    .next()
-                    .addClass("slider--item-right"))
-                : s === a - 1
-                ? (l
-                    .removeClass("slider--item-left")
-                    .next()
-                    .addClass("slider--item-left"),
-                  u
-                    .removeClass("slider--item-center")
-                    .first()
-                    .addClass("slider--item-center"),
-                  h
-                    .removeClass("slider--item-right")
-                    .next()
-                    .addClass("slider--item-right"))
-                : (l
-                    .removeClass("slider--item-left")
-                    .next()
-                    .addClass("slider--item-left"),
-                  c
-                    .removeClass("slider--item-center")
-                    .next()
-                    .addClass("slider--item-center"),
-                  u
-                    .removeClass("slider--item-right")
-                    .first()
-                    .addClass("slider--item-right"))
-              : 0 !== i && 0 !== s && 0 !== o
-              ? (l
-                  .removeClass("slider--item-left")
-                  .prev()
-                  .addClass("slider--item-left"),
-                c
-                  .removeClass("slider--item-center")
-                  .prev()
-                  .addClass("slider--item-center"),
-                h
-                  .removeClass("slider--item-right")
-                  .prev()
-                  .addClass("slider--item-right"))
-              : 0 === i
-              ? (u
-                  .removeClass("slider--item-left")
-                  .last()
-                  .addClass("slider--item-left"),
-                c
-                  .removeClass("slider--item-center")
-                  .prev()
-                  .addClass("slider--item-center"),
-                h
-                  .removeClass("slider--item-right")
-                  .prev()
-                  .addClass("slider--item-right"))
-              : 0 === s
-              ? (l
-                  .removeClass("slider--item-left")
-                  .prev()
-                  .addClass("slider--item-left"),
-                u
-                  .removeClass("slider--item-center")
-                  .last()
-                  .addClass("slider--item-center"),
-                h
-                  .removeClass("slider--item-right")
-                  .prev()
-                  .addClass("slider--item-right"))
-              : (l
-                  .removeClass("slider--item-left")
-                  .prev()
-                  .addClass("slider--item-left"),
-                c
-                  .removeClass("slider--item-center")
-                  .prev()
-                  .addClass("slider--item-center"),
-                u
-                  .removeClass("slider--item-right")
-                  .last()
-                  .addClass("slider--item-right"));
-          }, 400),
-          $(".slider").animate({ opacity: 1 }, 400);
-      });
-    }
+    // function s() {
+    //   $(".slider--prev, .slider--next").click(function () {
+    //     var t = $(this),
+    //       e = $(".slider").find(".slider--item-left"),
+    //       i = $(".slider").children().index(e),
+    //       n = $(".slider").find(".slider--item-center"),
+    //       s = $(".slider").children().index(n),
+    //       r = $(".slider").find(".slider--item-right"),
+    //       o = $(".slider").children().index(r),
+    //       a = $(".slider").children().length,
+    //       l = $(".slider--item-left"),
+    //       c = $(".slider--item-center"),
+    //       h = $(".slider--item-right"),
+    //       u = $(".slider--item");
+    //     $(".slider").animate({ opacity: 0 }, 400),
+    //       setTimeout(function () {
+    //         t.hasClass("slider--next")
+    //           ? a - 1 > i && a - 1 > s && a - 1 > o
+    //             ? (l
+    //                 .removeClass("slider--item-left")
+    //                 .next()
+    //                 .addClass("slider--item-left"),
+    //               c
+    //                 .removeClass("slider--item-center")
+    //                 .next()
+    //                 .addClass("slider--item-center"),
+    //               h
+    //                 .removeClass("slider--item-right")
+    //                 .next()
+    //                 .addClass("slider--item-right"))
+    //             : i === a - 1
+    //             ? (u
+    //                 .removeClass("slider--item-left")
+    //                 .first()
+    //                 .addClass("slider--item-left"),
+    //               c
+    //                 .removeClass("slider--item-center")
+    //                 .next()
+    //                 .addClass("slider--item-center"),
+    //               h
+    //                 .removeClass("slider--item-right")
+    //                 .next()
+    //                 .addClass("slider--item-right"))
+    //             : s === a - 1
+    //             ? (l
+    //                 .removeClass("slider--item-left")
+    //                 .next()
+    //                 .addClass("slider--item-left"),
+    //               u
+    //                 .removeClass("slider--item-center")
+    //                 .first()
+    //                 .addClass("slider--item-center"),
+    //               h
+    //                 .removeClass("slider--item-right")
+    //                 .next()
+    //                 .addClass("slider--item-right"))
+    //             : (l
+    //                 .removeClass("slider--item-left")
+    //                 .next()
+    //                 .addClass("slider--item-left"),
+    //               c
+    //                 .removeClass("slider--item-center")
+    //                 .next()
+    //                 .addClass("slider--item-center"),
+    //               u
+    //                 .removeClass("slider--item-right")
+    //                 .first()
+    //                 .addClass("slider--item-right"))
+    //           : 0 !== i && 0 !== s && 0 !== o
+    //           ? (l
+    //               .removeClass("slider--item-left")
+    //               .prev()
+    //               .addClass("slider--item-left"),
+    //             c
+    //               .removeClass("slider--item-center")
+    //               .prev()
+    //               .addClass("slider--item-center"),
+    //             h
+    //               .removeClass("slider--item-right")
+    //               .prev()
+    //               .addClass("slider--item-right"))
+    //           : 0 === i
+    //           ? (u
+    //               .removeClass("slider--item-left")
+    //               .last()
+    //               .addClass("slider--item-left"),
+    //             c
+    //               .removeClass("slider--item-center")
+    //               .prev()
+    //               .addClass("slider--item-center"),
+    //             h
+    //               .removeClass("slider--item-right")
+    //               .prev()
+    //               .addClass("slider--item-right"))
+    //           : 0 === s
+    //           ? (l
+    //               .removeClass("slider--item-left")
+    //               .prev()
+    //               .addClass("slider--item-left"),
+    //             u
+    //               .removeClass("slider--item-center")
+    //               .last()
+    //               .addClass("slider--item-center"),
+    //             h
+    //               .removeClass("slider--item-right")
+    //               .prev()
+    //               .addClass("slider--item-right"))
+    //           : (l
+    //               .removeClass("slider--item-left")
+    //               .prev()
+    //               .addClass("slider--item-left"),
+    //             c
+    //               .removeClass("slider--item-center")
+    //               .prev()
+    //               .addClass("slider--item-center"),
+    //             u
+    //               .removeClass("slider--item-right")
+    //               .last()
+    //               .addClass("slider--item-right"));
+    //       }, 400),
+    //       $(".slider").animate({ opacity: 1 }, 400);
+    //   });
+    // }
     function r() {
       $(".work-request--information input").focusout(function () {
         var t = $(this).val();
@@ -1442,7 +1442,7 @@
         $(".outer-nav").hasClass("is-vis") || (e.preventDefault(), t(e));
       }),
       n(),
-      s(),
+      // s(),
       r();
   });
   /*--------------------
@@ -1453,6 +1453,16 @@ let startX = 0
 let active = 0
 let isDown = false
 
+  /*--------------------
+Vars2
+--------------------*/
+let progress2 = 50
+let startX2 = 0
+let active2 = 0
+let isDown2 = false
+
+
+
 /*--------------------
 Contants
 --------------------*/
@@ -1460,9 +1470,20 @@ const speedWheel = 0.02
 const speedDrag = -0.1
 
 /*--------------------
+Contants2
+--------------------*/
+const speedWheel2 = 0.02
+const speedDrag2 = -0.1
+
+/*--------------------
 Get Z
 --------------------*/
 const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
+
+/*--------------------
+Get Z2
+--------------------*/
+const getZindex2 = (array2, index2) => (array2.map((_, i) => (index2 === i) ? array2.length : array2.length - Math.abs(index2 - i)))
 
 /*--------------------
 Items
@@ -1474,6 +1495,19 @@ const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index]
   item.style.setProperty('--zIndex', zIndex)
   item.style.setProperty('--active', (index-active)/$items.length)
+}
+
+
+/*--------------------
+Items2
+--------------------*/
+const $items2 = document.querySelectorAll('.carousel-item2')
+const $cursors2 = document.querySelectorAll('.cursor2')
+
+const displayItems2 = (item2, index2, active2) => {
+  const zIndex = getZindex([...$items2], active2)[index2]
+  item2.style.setProperty('--zIndex', zIndex)
+  item2.style.setProperty('--active', (index2-active2)/$items2.length)
 }
 
 /*--------------------
@@ -1488,12 +1522,33 @@ const animate = () => {
 animate()
 
 /*--------------------
+Animate2
+--------------------*/
+const animate2 = () => {
+  progress2 = Math.max(0, Math.min(progress2, 100))
+  active2 = Math.floor(progress2/100*($items2.length-1))
+  
+  $items2.forEach((item2, index2) => displayItems(item2, index2, active2))
+}
+animate()
+
+/*--------------------
 Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
     progress = (i/$items.length) * 100 + 10
     animate()
+  })
+})
+
+/*--------------------
+Click on Items2
+--------------------*/
+$items2.forEach((item2, i2) => {
+  item2.addEventListener('click', () => {
+    progress = (i2/$items.length) * 100 + 10
+    animate2()
   })
 })
 
@@ -1530,6 +1585,39 @@ const handleMouseUp = () => {
 }
 
 /*--------------------
+Handlers2
+--------------------*/
+const handleWheel2 = e2 => {
+  const wheelProgress2 = e2.deltaY * speedWheel
+  progress2 = progress2 + wheelProgress2
+  animate2()
+}
+
+const handleMouseMove2 = (e2) => {
+  if (e2.type === 'mousemove') {
+    $cursors2.forEach(($cursor2) => {
+      $cursor2.style.transform = `translate(${e2.clientX}px, ${e2.clientY}px)`
+    })
+  }
+  if (!isDown) return
+  const x2 = e2.clientX || (e2.touches && e2.touches[0].clientX) || 0
+  const mouseProgress2 = (x2 - startX2) * speedDrag
+  progress2 = progress2 + mouseProgress2
+  startX2 = x2
+  animate()
+}
+
+const handleMouseDown2 = e2 => {
+  isDown2 = true
+  startX2 = e2.clientX || (e2.touches && e2.touches[0].clientX) || 0
+}
+
+const handleMouseUp2 = () => {
+  isDown2 = false
+}
+
+
+/*--------------------
 Listeners
 --------------------*/
 document.addEventListener('mousewheel', handleWheel)
@@ -1539,6 +1627,22 @@ document.addEventListener('mouseup', handleMouseUp)
 document.addEventListener('touchstart', handleMouseDown)
 document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp)
+
+$("#textD").on("mousedown", function() {
+  $(this).fadeOut();
+});
+
+
+/*--------------------
+Listeners2
+--------------------*/
+document.addEventListener('mousewheel', handleWheel2)
+document.addEventListener('mousedown', handleMouseDown2)
+document.addEventListener('mousemove', handleMouseMove2)
+document.addEventListener('mouseup', handleMouseUp2)
+document.addEventListener('touchstart', handleMouseDown2)
+document.addEventListener('touchmove', handleMouseMove2)
+document.addEventListener('touchend', handleMouseUp2)
 
 $("#textD").on("mousedown", function() {
   $(this).fadeOut();
